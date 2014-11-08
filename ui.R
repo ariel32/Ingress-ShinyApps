@@ -9,7 +9,10 @@
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Hello Shiny!"),
+  titlePanel("Game from Google: Ingress"),
+  h1("Geoprofiling"),
+  hr(),
+  h3("Please, wait..."),
   
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
