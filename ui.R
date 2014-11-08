@@ -1,9 +1,9 @@
-library(shiny)
-library(gstat)
-library(sp)
-library(raster)
-library(rasterVis)
-library(colorRamps)
+# library(shiny)
+# library(gstat)
+# library(sp)
+# library(raster)
+# library(rasterVis)
+# library(colorRamps)
 
 
 shinyUI(fluidPage(
