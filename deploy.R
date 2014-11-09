@@ -1,4 +1,3 @@
-setwd("E:/Work/Projects/Ingress/")
 library(shiny)
 library(shinyapps)
 

@@ -18,8 +18,7 @@ shinyServer(function(input, output) {
   
   dataset <- reactive(function(){
     
-    # this FUCKIN BULLLSHIT don't work, if I try substitute input$agent to agents data.frame
-    data = as.data.frame(cbind(x,y,agents["capsula"]))
+    data = as.data.frame(cbind(x,y,agents[input$agent]))
     names(data) <- c("x", "y", "z")
     
     
