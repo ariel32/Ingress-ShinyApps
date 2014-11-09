@@ -56,7 +56,7 @@ shinyUI(fluidPage(
       p("Please be patient. Applying changes will take some time."),
       plotOutput("plot", width="700px"),
       h1("Docs will be here"),
-      p("Help")
+      p("This Help")
     )
   )
 )
