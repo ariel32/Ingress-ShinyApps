@@ -12,7 +12,7 @@ capsula = rpois(10,10)
 MalenkiyKiller = rnorm(10,100,4)
 joras = rnbinom(10,10,0.545)
 KORN = sample(1000, 10, T)
-t.param = KORN
+agents = as.data.frame(cbind(capsula,joras, KORN, MalenkiyKiller))
 
 shinyServer(function(input, output) {
   
@@ -21,7 +21,9 @@ shinyServer(function(input, output) {
   })
   
   output$plot <- renderPlot({
-    data = as.data.frame(cbind(x,y,getAgent))
+    z = agents[getAgent]
+    
+    data = as.data.frame(cbind(x,y,z))
     names(data) <- c("x", "y", "z")
     data$x <- as.numeric(as.character(data$x))
     data$y <- as.numeric(as.character(data$y))
