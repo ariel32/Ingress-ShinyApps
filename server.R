@@ -15,6 +15,7 @@ KORN = sample(1000, 10, T)
 agents = as.data.frame(cbind(capsula,joras, KORN, MalenkiyKiller))
 
 shinyServer(function(input, output) {
+  #asdfasdf
   
   getAgent <- reactive({
     input$agent
