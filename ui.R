@@ -17,15 +17,33 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
     sidebarPanel(
-      sliderInput("bins",
-                  "Number of bins:",
-                  min = 1,
-                  max = 50,
-                  value = 30),
+      sliderInput("by",
+                  "Precision of kriging:",
+                  min = 0.1,
+                  max = 0.5,
+                  value = 0.1),
+      sliderInput("psill",
+                  "Partial sill of variogramm model:",
+                  min = 0.1,
+                  max = 1.0,
+                  value = 0.5),
+      
       
       selectInput("agent", label = h3("Select agent name"), 
                   list("capsula" = "capsula", "KORN" = "KORN", "joras" = "joras", "MalenkiyKiller" = "MalenkiyKiller"), 
-                  selected = "capsula")
+                  selected = "capsula"),
+      
+      checkboxInput("contour", label = "Enable contour", value = TRUE),
+      
+      selectInput("varModel", label = h3("Select Variogram Model"), 
+                  list("Exponential" = "Exp", "Spherical" = "Sph", "Gaussian" = "Gau", "Mat" = "Mat"), 
+                  selected = "Spherical"),
+      
+      selectInput("rasterSize", label = h3("Select raster size"), 
+                  list("50" = 50, "100" = 100, "150" = 150, "200" = 200), 
+                  selected = "100")
+      
+
     ),
     
     # Show a plot of the generated distribution
