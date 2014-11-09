@@ -22,6 +22,7 @@ shinyUI(fluidPage(
                   min = 1,
                   max = 50,
                   value = 30),
+      
       selectInput("agent", label = h3("Select agent name"), 
                   list("capsula" = 1, "KORN" = 2, "joras" = 3, "MalenkiyKiller" = 4), 
                   selected = 1)
