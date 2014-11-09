@@ -25,9 +25,7 @@ shinyServer(function(input, output) {
     
     data = as.data.frame(cbind(x,y,z))
     names(data) <- c("x", "y", "z")
-    data$x <- as.numeric(as.character(data$x))
-    data$y <- as.numeric(as.character(data$y))
-    
+  
     x.range = seq(from = min(data$x-data$x/10), to = max(data$x+data$x/10), by = 0.1)
     y.range = seq(from = min(data$y-data$y/10), to = max(data$y+data$y/10), by = 0.1)
     g <- gstat(id="log", formula = data$z~1, locations = ~x+y,
