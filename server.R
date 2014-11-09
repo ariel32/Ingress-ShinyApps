@@ -47,6 +47,6 @@ shinyServer(function(input, output) {
     levelplot(dataset(), margin = FALSE,
               contour = input$contour,
               par.settings = rasterTheme(region = matlab.like(n = 10)), 
-              alpha.regions = 0.35)
+              alpha.regions = input$alpha)
   })
 })

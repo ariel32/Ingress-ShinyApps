@@ -10,7 +10,6 @@ shinyUI(fluidPage(
   
   # Application title
   titlePanel("Game from Google: Ingress"),
-  h1("Geoprofiling"),
   hr(),
 
   # Sidebar with a slider input for the number of bins
@@ -34,6 +33,12 @@ shinyUI(fluidPage(
       
       checkboxInput("contour", label = "Enable contour", value = TRUE),
       
+      sliderInput("alpha",
+                  "Alpha regions:",
+                  min = 0,
+                  max = 1,
+                  value = 0.35),
+      
       selectInput("varModel", label = h3("Select Variogram Model"), 
                   list("Exponential" = "Exp", "Spherical" = "Sph", "Gaussian" = "Gau", "Mat" = "Mat"), 
                   selected = "Spherical"),
@@ -49,7 +54,9 @@ shinyUI(fluidPage(
     mainPanel(
       p("This apps create a heatmap of activity selected player in Ingress - geoposition game from Google"),
       p("Please be patient. Applying changes will take some time."),
-      plotOutput("plot", width="700px")
+      plotOutput("plot", width="700px"),
+      h1("Docs will be here"),
+      p("Help")
     )
   )
 )
