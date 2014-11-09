@@ -12,8 +12,7 @@ shinyUI(fluidPage(
   titlePanel("Game from Google: Ingress"),
   h1("Geoprofiling"),
   hr(),
-  h3("Please, wait..."),
-  
+
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
     sidebarPanel(
@@ -48,6 +47,8 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
+      p("This apps create a heatmap of activity selected player in Ingress - geoposition game from Google"),
+      p("Please be patient. Applying changes will take some time."),
       plotOutput("plot", width="700px")
     )
   )

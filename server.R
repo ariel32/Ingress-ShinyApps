@@ -42,9 +42,6 @@ shinyServer(function(input, output) {
     
   })
   
-  
-  
-  
   output$plot <- renderPlot({
     
     levelplot(dataset(), margin = FALSE,
