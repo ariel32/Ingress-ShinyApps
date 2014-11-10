@@ -50,7 +50,7 @@ shinyUI(fluidPage(
 
     ),
     
-    # Show a plot of the generated distribution test
+    # Show a plot of the generated distribution
     mainPanel(
       p("This apps create a heatmap of activity selected player in Ingress - geoposition game from Google"),
       p("Please be patient. Applying changes will take some time."),
