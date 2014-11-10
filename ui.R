@@ -56,7 +56,13 @@ shinyUI(fluidPage(
       p("Please be patient. Applying changes will take some time."),
       plotOutput("plot", width="700px"),
       h1("Docs will be here"),
-      p("This Help")
+      p("This simple app, that plot heatmap of activity Ingress players.
+In example exist simulated data for some Resistance agents.
+App allow:
+        
+        - Change model of variogram
+        - Change some parameters for krigging
+        - Change displying heatmap contours")
     )
   )
 )
