@@ -1,4 +1,3 @@
-library(shiny)
 library(gstat)
 library(sp)
 library(raster)
