@@ -1,0 +1,5 @@
+name: Ingress
+account: capsula
+bundleId: 87642
+url: http://capsula.shinyapps.io/Ingress
+server: shinyapps.io
